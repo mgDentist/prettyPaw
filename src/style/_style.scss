@@ -12,11 +12,20 @@ html {
 body {
   min-width: 320px;
   min-height: 100vh;
-  font-family: Arial, sans-serif;
+  font-family: "Mulish", sans-serif;
+  line-height: 1.4;
+  font-size: 16px;
+  color: $main;
+  background-color: $back;
+
+  @include lg {
+    font-size: 20px;
+  }
 }
 
 
-img, svg {
+img, svg, video {
+  display: block;
   max-width: 100%;
   max-height: 100%;
   height: auto;
@@ -74,6 +83,44 @@ iframe {
 */
 
 .container {
-  padding: 0 30px;
-  margin: 0 auto;
+  padding: 0 16px;
+
+  @include sm {
+    padding: 0 24px;
+  }
+
+  @include md {
+    padding: 0 32px;
+  }
+
+  @include xl {
+    padding: 0 30px;
+  }
+
+  @include xxl {
+    max-width: 2560px;
+    margin: 0 auto;
+    padding: 0 60;
+  }
+}
+
+.link-main {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 20px;
+  font-weight: 1000;
+  font-size: 16px;
+  line-height: 1;
+  color: $back;
+  background: $second;
+  border-radius: 80px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url("../img/icon-arror-right.svg");
+  }
 }

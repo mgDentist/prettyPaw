@@ -44,7 +44,7 @@
         <h1 class="hero__title">Зоосад</h1>
         <p class="hero__subtitle">С заботой о животных</p>
       </div>
-      <video class="hero__video-bg video-bg" autoplay muted></video>
+      <video class="hero__video-bg video-bg" autoplay loop muted playsinline></video>
     </section>
     <section class="about">
       <div class="container about__container">
@@ -76,7 +76,7 @@
                   <source media="(min-width: 1024px)" srcset="img/leo_laptop.jpg">
                   <source media="(min-width: 768px)" srcset="img/leo_tablet.webp" type="image/webp">
                   <source media="(min-width: 768px)" srcset="img/leo_tablet.jpg">
-                  <img src="img/leo.jpg" srcset="img/leo.webp" alt="Пара львов.">
+                  <img class="about__image" src="img/leo.jpg" srcset="img/leo.webp" alt="Пара львов.">
                 </picture>
               </li>
               <li class="about__image-item swiper-slide">
@@ -87,7 +87,8 @@
                   <source media="(min-width: 1024px)" srcset="img/parrots_laptop.jpg">
                   <source media="(min-width: 768px)" srcset="img/parrots_tablet.webp" type="image/webp">
                   <source media="(min-width: 768px)" srcset="img/parrots_tablet.jpg">
-                  <img src="img/parrots.jpg" srcset="img/parrots.webp" alt="Группа попугаев." loading="lazy">
+                  <img class="about__image" src="img/parrots.jpg" srcset="img/parrots.webp" alt="Группа попугаев."
+                    loading="lazy">
                 </picture>
               </li>
               <li class="about__image-item swiper-slide">
@@ -98,7 +99,7 @@
                   <source media="(min-width: 1024px)" srcset="img/fulgens_laptop.jpg">
                   <source media="(min-width: 768px)" srcset="img/fulgens_tablet.webp" type="image/webp">
                   <source media="(min-width: 768px)" srcset="img/fulgens_tablet.jpg">
-                  <img src="img/fulgens.jpg" srcset="img/fulgens.webp" alt="Панда." loading="lazy">
+                  <img class="about__image" src="img/fulgens.jpg" srcset="img/fulgens.webp" alt="Панда." loading="lazy">
                 </picture>
               </li>
               <li class="about__image-item swiper-slide">
@@ -109,7 +110,8 @@
                   <source media="(min-width: 1024px)" srcset="img/giraffe_laptop.jpg">
                   <source media="(min-width: 768px)" srcset="img/giraffe_tablet.webp" type="image/webp">
                   <source media="(min-width: 768px)" srcset="img/giraffe_tablet.jpg">
-                  <img src="img/giraffe.jpg" srcset="img/giraffe.webp" alt="Голова жирафа." loading="lazy">
+                  <img class="about__image" src="img/giraffe.jpg" srcset="img/giraffe.webp" alt="Голова жирафа."
+                    loading="lazy">
                 </picture>
               </li>
             </ul>
@@ -156,7 +158,7 @@
       <div class="container career__container">
         <div class="career__content">
           <h2 class="career__title">Карьера у нас</h2>
-          <p class="career__subtitle">Карьера в компании «Зоосад» может предоставить много интересных и перспективных
+          <p class="career__description">Карьера в компании «Зоосад» может предоставить много интересных и перспективных
             возможностей для людей, увлеченных животными и желающих развиваться в этой области.</p>
           <a href="#career" class="career__link link-main">Подробнее</a>
         </div>
@@ -177,7 +179,7 @@
             <li class="career__image-item swiper-slide">
               <picture class="career__image-wrapper">
                 <source srcset="img/giraffes.webp" type="image/webp">
-                <img src="img/giraffes.jpg" alt="Женщина смотрит на жирафов." loading="lazy">
+                <img class="career__image" src="img/giraffes.jpg" alt="Женщина смотрит на жирафов." loading="lazy">
               </picture>
             </li>
             <li class="career__image-item swiper-slide">
@@ -211,11 +213,12 @@
               </picture>
             </li>
           </ul>
+          <div class="career__slider-pagination swiper-pagination"></div>
         </div>
       </div>
     </section>
   </main>
-  <footer>
+  <footer class="footer">
     <div class="container footer__container">
       <img class="footer__logo" src="img/logo-pretty-paw-black.svg" alt="Логотип Зоосада Pretty Paw.">
       <ul class="footer__social-list">

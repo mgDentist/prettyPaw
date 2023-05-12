@@ -1,6 +1,10 @@
 .location {
+    position: relative;
 
     &__list {
+        position: relative;
+        z-index: 10;
+
         @include lg {
             display: flex;
             min-height: 552px;
@@ -69,6 +73,10 @@
             inset: 0;
             background-size: cover;
             background-position: center;
+
+            @include lg {
+                background-image: none;
+            }
         }
 
         &--mammals {
@@ -89,16 +97,6 @@
                             url("../img/mammals_tablet@2x.jpg") 2x,
                             url("../img/mammals_tablet.webp") 1x,
                             url("../img/mammals_tablet.jpg") 1x);
-                }
-
-                @include lg {
-                    background-image:
-                        url("../img/mammals_laptop.jpg");
-                    background-image:
-                        image-set(url("../img/mammals_laptop@2x.webp") 2x,
-                            url("../img/mammals_laptop@2x.jpg") 2x,
-                            url("../img/mammals_laptop.webp") 1x,
-                            url("../img/mammals_laptop.jpg") 1x);
                 }
             }
         }
@@ -122,16 +120,6 @@
                             url("../img/birds_tablet.webp") 1x,
                             url("../img/birds_tablet.jpg") 1x);
                 }
-
-                @include lg {
-                    background-image:
-                        url("../img/birds_laptop.jpg");
-                    background-image:
-                        image-set(url("../img/birds_laptop@2x.webp") 2x,
-                            url("../img/birds_laptop@2x.jpg") 2x,
-                            url("../img/birds_laptop.webp") 1x,
-                            url("../img/birds_laptop.jpg") 1x);
-                }
             }
         }
 
@@ -153,16 +141,6 @@
                             url("../img/reptiles_tablet@2x.jpg") 2x,
                             url("../img/reptiles_tablet.webp") 1x,
                             url("../img/reptiles_tablet.jpg") 1x);
-                }
-
-                @include lg {
-                    background-image:
-                        url("../img/reptiles_laptop.jpg");
-                    background-image:
-                        image-set(url("../img/reptiles_laptop@2x.webp") 2x,
-                            url("../img/reptiles_laptop@2x.jpg") 2x,
-                            url("../img/reptiles_laptop.webp") 1x,
-                            url("../img/reptiles_laptop.jpg") 1x);
                 }
             }
         }
@@ -186,16 +164,6 @@
                             url("../img/water_tablet.webp") 1x,
                             url("../img/water_tablet.jpg") 1x);
                 }
-
-                @include lg {
-                    background-image:
-                        url("../img/water_laptop.jpg");
-                    background-image:
-                        image-set(url("../img/water_laptop@2x.webp") 2x,
-                            url("../img/water_laptop@2x.jpg") 2x,
-                            url("../img/water_laptop.webp") 1x,
-                            url("../img/water_laptop.jpg") 1x);
-                }
             }
         }
 
@@ -217,16 +185,6 @@
                             url("../img/insects_tablet@2x.jpg") 2x,
                             url("../img/insects_tablet.webp") 1x,
                             url("../img/insects_tablet.jpg") 1x);
-                }
-
-                @include lg {
-                    background-image:
-                        url("../img/insects_laptop.jpg");
-                    background-image:
-                        image-set(url("../img/insects_laptop@2x.webp") 2x,
-                            url("../img/insects_laptop@2x.jpg") 2x,
-                            url("../img/insects_laptop.webp") 1x,
-                            url("../img/insects_laptop.jpg") 1x);
                 }
             }
         }
@@ -261,6 +219,14 @@
 
         @include lg {
             display: none;
+        }
+    }
+
+    &__video-bg {
+        display: none;
+
+        @include lg {
+            display: block;
         }
     }
 }

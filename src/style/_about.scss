@@ -129,8 +129,6 @@
         }
     }
 
-    &__count-desc {}
-
     &__picture {
         @include lg {
             grid-area: slider;

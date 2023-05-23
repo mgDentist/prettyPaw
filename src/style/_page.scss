@@ -1,0 +1,104 @@
+.page {
+    padding-top: 120px;
+    padding-bottom: 40px;
+
+    @include lg {
+        padding-top: 216px;
+        padding-bottom: 100px;
+    }
+
+    &__container {
+        padding: 0 16px;
+
+        @include md {
+            padding: 0 32px;
+        }
+
+        @include lg {
+            min-width: 1144px;
+            padding-left: 192px;
+        }
+
+        @include xl {
+            min-width: 920px;
+            margin: 0 auto;
+        }
+    }
+
+    &__title {
+        font-weight: 1000;
+        font-size: 32px;
+        line-height: 1;
+        text-transform: uppercase;
+        color: $second;
+        margin-bottom: 24px;
+
+        @include lg {
+            font-size: 52px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__text-block {
+        margin-bottom: 40px;
+
+        @include lg {
+            margin-bottom: 60px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__text {
+        margin-bottom: 16px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__image-block {
+        margin-bottom: 40px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__image {
+        object-fit: cover;
+        border-radius: 16px;
+        height: 308px;
+
+        &:nth-child(2) {
+            display: none;
+        }
+
+        @include sm {
+            height: auto;
+            width: 48.5%;
+
+            &:nth-child(2) {
+                display: block;
+            }
+        }
+    }
+
+    &__image-block--double {
+        @include sm {
+            display: flex;
+            gap: 18px;
+        }
+
+        @include lg {
+            gap: 20px;
+        }
+
+        @include lg {
+            gap: 30px;
+        }
+    }
+
+}

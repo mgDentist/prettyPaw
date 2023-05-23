@@ -1,4 +1,5 @@
 import './index.html';
+import './page.html';
 
 import 'swiper/scss';
 import 'swiper/scss/pagination';
@@ -7,14 +8,19 @@ import { slidersInit } from './modules/slider';
 import { videoBackgroundInit } from './modules/videoBackground';
 import { menuControl } from './modules/menuControl';
 import { locationHover } from './modules/locationHover';
+import { initScrollTopButton } from './modules/scrollTopButton';
+import { pageControlInit } from './modules/pageControl';
 
 videoBackgroundInit();
 menuControl();
 locationHover();
+initScrollTopButton('arrow-top');
+pageControlInit();
 
 slidersInit('.about__slider', {
     pagination: {
         el: '.about__slider-pagination',
+        enabled: true,
     }
 });
 
@@ -32,17 +38,23 @@ slidersInit('.career__slider', {
         576: {
             slidesPerView: 'auto',
             spaceBetween: 20,
-            pagination: false,
+            pagination: {
+                enabled: false,
+            },
         },
         1024: {
             slidesPerView: 'auto',
             spaceBetween: 26,
-            pagination: false,
+            pagination: {
+                enabled: false,
+            },
         },
         1240: {
             slidesPerView: 'auto',
             spaceBetween: 30,
-            pagination: false,
+            pagination: {
+                enabled: false,
+            },
         },
     }
 });

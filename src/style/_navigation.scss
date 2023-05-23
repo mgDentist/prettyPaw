@@ -57,7 +57,11 @@
 
         &--active {
             color: $back;
-            pointer-events: none;
+            // pointer-events: none;
+
+            &:hover {
+                color: $main;
+            }
 
             @include xl {
                 color: inherit;

@@ -67,4 +67,21 @@
             margin-bottom: 0;
         }
     }
+
+    &__social-link,
+    &__developer-link {
+        color: $main;
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+        border-radius: 3px;
+        transition: color .3s ease-in-out;
+
+        &:focus:not(:hover) {
+            outline-color: $second;
+        }
+
+        &:hover {
+            color: $second;
+        }
+    }
 }
